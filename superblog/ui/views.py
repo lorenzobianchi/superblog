@@ -4,9 +4,8 @@ from django.core.urlresolvers import reverse, reverse_lazy
 from django.db import models, transaction
 from django.shortcuts import get_object_or_404
 
-User = get_user_model()
 
-class ClienteList(ListView):
+class HomeView(ListView):
     model = Post
     queryset = Post.objects.all()
     template_name = "ui/home.html"

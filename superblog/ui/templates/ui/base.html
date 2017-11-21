@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <!-- css base -->
+    <title>Superblog | {% block head_title %}{% endblock head_title %}</title>
+    <!-- css uikit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'ui/css/index.css' %}" />
+
+    {% block head_bottom %}
+    {% endblock head_bottom %}
+
+  </head>
+  <body>
+
+    {% include "ui/navigation.html" %}
+
+   <div class="uk-container" style="min-height: 90vh;">
+     {% block content %}
+     {% endblock content %}
+   </div>
+
+  <!-- base libs here -->
+  <!-- <script type="text/javascript">
+
+  </script> -->
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+
+    {% block body_bottom %}
+    {% endblock body_bottom %}
+
+  </body>
+</html>
