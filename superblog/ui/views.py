@@ -5,8 +5,15 @@ from django.db import models, transaction
 from django.shortcuts import get_object_or_404
 
 
-class HomeView(ListView):
+class HomeView(TemplateView):
+    template_name = "ui/home.html"
+
+class PostListView(ListView):
     model = Post
     queryset = Post.objects.all()
-    template_name = "ui/home.html"
-    paginate_by = 10
+    template_name = "ui/post-list.html"
+
+class PostDetailView(DetailView):
+    model = Post
+    queryset = Post.objects.all()
+    template_name = "ui/post-detail.html"

@@ -3,8 +3,8 @@
         <div uk-navbar>
 
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li>
+                <li class="uk-active"><a class="uk-logo" href="#">SuperBlog</a></li>
+                <!-- <li>
                     <a href="#">Parent</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -12,9 +12,9 @@
                             <li><a href="#">Item</a></li>
                             <li><a href="#">Item</a></li>
                         </ul>
-                    </div>
-                </li>
-                <li><a href="#">Item</a></li>
+                    </div> -->
+                <li><button class="uk-navbar-item" uk-toggle="target: #offcanvas-nav">OPEN</button></li>
+                <li><a href="{% url 'post_list' %}">articoli</a></li>
             </ul>
 
         </div>
