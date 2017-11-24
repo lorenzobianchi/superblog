@@ -1,10 +1,13 @@
 {% extends "ui/base.html" %}
+{% block head_title %}articles{% endblock head_title %}
 {% block content %}
 <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid>
   {% for object in object_list %}
+  <a href="{% url 'post_detail' object.pk %}">
     <div>
         <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small">{{ object.title }}</div>
     </div>
+  </a>
   {% endfor %}
     <!-- <div class="uk-flex-last">
         <div class="uk-card uk-card-secondary uk-card-body">Item 2</div>
