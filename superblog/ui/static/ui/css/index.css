@@ -1,4 +1,20 @@
-.transparent-btn {
-  border: 0px;
-  background-color: transparent;
+body {
+  background-color: lightblue;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.my-nav {
+  background-color: darkslateblue;
+}
+
+.card-post-list {
+  max-width: 320px;
 }
