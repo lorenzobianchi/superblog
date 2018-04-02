@@ -18,3 +18,13 @@ a:hover {
 .card-post-list {
   max-width: 320px;
 }
+
+.my-button-indigo {
+  background-color: indigo;
+}
+
+.my-button-indigo:hover,
+.my-button-indigo:active {
+  background-color: fuchsia;
+  color: #fff;
+}

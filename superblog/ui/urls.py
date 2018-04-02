@@ -2,11 +2,12 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 from .views import (
-    HomeView, PostListView, PostDetailView
+    HomeView, PostListView, PostDetailView, PostCreate
 )
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name="home"),
     url(r'^post-list$', PostListView.as_view(), name="post_list"),
+    url(r'^post-list/add/$', PostCreate.as_view(), name="post_create"),
     url(r'^post-list/(?P<pk>\d+)/detail$', PostDetailView.as_view(), name="post_detail"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

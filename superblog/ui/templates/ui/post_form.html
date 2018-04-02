@@ -1,0 +1,13 @@
+{% extends "ui/base.html" %}
+{% block head_title %}article {{ object.title }}{% endblock head_title %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<article class="uk-article">
+
+    <h1 class="uk-article-title">Nuovo SuperPost</h1>
+    <div>
+      {% crispy form %}
+    </div>
+</article>
+{% endblock content %}
